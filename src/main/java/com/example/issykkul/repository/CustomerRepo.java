@@ -1,0 +1,10 @@
+package com.example.issykkul.repository;
+
+import com.example.issykkul.entity.CustomerEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CustomerRepo extends JpaRepository<CustomerEntity,Long> {
+    CustomerEntity findByEmail(String email);
+}
